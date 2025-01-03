@@ -2,40 +2,62 @@
 
 ## Basic Pull Commands
 # Pull an image from Docker Hub
+```bash
 docker pull <image_name>:<tag>
+```
 
 # Pull latest tag
+```bash
 docker pull <image_name>
+```
 
 # Pull specific version
+```bash
 docker pull <image_name>:1.0
+```
 
 ## Pull from Private Registry
 # Login to private registry
+```bash
 docker login <registry_url>
+```
 
 # Pull from private registry
+```bash
 docker pull <registry_url>/<image_name>:<tag>
+```
 
 ## Examples
 # Pull Ubuntu 20.04
-docker pull ubuntu:20.04
+```bash
+   docker pull ubuntu:20.04
+```
 
 # Pull latest nginx
-docker pull nginx
+```bash
+   docker pull nginx
+```
 
 # Pull from private registry example
-docker pull myregistry.azurecr.io/myapp:1.0
+```bash
+   docker pull myregistry.azurecr.io/myapp:1.0
+```
 
 ## Managing Pulled Images
 # List downloaded images
-docker images
+```bash
+   docker images
+```
 
 # Remove pulled image
-docker rmi <image_name>:<tag>
+```bash
+            docker rmi <image_name>:<tag>
+```
 
 # Remove all unused images
-docker image prune
+```bash
+   docker image prune   
+```
 
 ## Best Practices
 # Always specify image tags for version control
