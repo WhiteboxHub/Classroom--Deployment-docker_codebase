@@ -46,7 +46,73 @@ volumes:
     driver: local   
 ```
 
+
+
+### 5. Scaling
+The deploy section under services can be used to scale services.
+
+```yaml
+deploy:
+  replicas: 3
+```
+
+
+
+### 6. Profiles
+
+The profiles section under services can be used to enable conditional service start-up using profiles.
+
+```yaml
+profiles:
+  dev:
+    image: nginx:latest
+```
+
+
+
+### 7. Secrets
+
+The secrets section under services can be used to manage sensitive information such as passwords and API keys securely.
+
+```yaml
+secrets:
+  my_secret:
+    file: ./secrets/my_secret.txt
+```
+
+### 8. Build
+
+The build section under services can be used to build images for your services.
+
+```yaml
+build:
+  context: .
+  dockerfile: Dockerfile
+```
+
+### 9. Pull
+
+The pull section under services can be used to pull images for your services.
+
+### 10. Push
+
+The push section under services can be used to push images to a Docker Hub repository.
+
+```yaml
+push:
+  image: nginx:latest
+```
+
+### 11. Restart
+
+The restart section under services can be used to restart a service.
+
+```yaml
+restart:
+  image: nginx:latest
+```
+
 ## Conclusion
 
 By understanding the different sections of a Docker Compose YAML file, you can create and manage multi-container Docker applications more effectively.
-
+    
