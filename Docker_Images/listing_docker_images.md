@@ -29,18 +29,18 @@ SIZE: The size of the image.
 
 ## 5. Example
 
-
+```bash
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 nginx               latest              79e1dc0be096        2 weeks ago         133MB
 ubuntu              20.04               3420d254c2d0        3 weeks ago         72.9MB
 myapp               1.0                 a1b2c3d4e5f6        4 weeks ago         500MB
-
+```
 
 This output shows three Docker images: nginx with the latest tag, ubuntu with the 20.04 tag, and myapp with the 1.0 tag. Each image has a unique ID, creation date, and size.
 
 ## Filtering Images
 
-ou can filter the list of Docker images to display only specific images based on certain criteria. This can be useful for managing and organizing your images more effectively
+You can filter the list of Docker images to display only specific images based on certain criteria. This can be useful for managing and organizing your images more effectively
 
 ## Filtering by Repository
 
@@ -48,7 +48,7 @@ To filter images by repository, you can use the --filter option with the docker 
 
 ## Example
 
-```dash
+```bash     
     docker images --filter "reference=nginx"
 ```
 
@@ -58,7 +58,7 @@ Dangling images are images that are not tagged and are not referenced by any con
 
 ## Example
 
-```bash
+```bash     
    docker images -f "dangling=true"
 ```
 
