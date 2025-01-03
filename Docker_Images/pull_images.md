@@ -1,43 +1,45 @@
-# Docker Pull Command: Downloading Docker Images
+# Common Docker Pull Commands
 
-## 1. Introduction
-
-Docker images are the foundation of containerized applications. They contain all the necessary components to run an application, including the code, runtime, libraries, and configuration files. The `docker pull` command allows you to download these images from a Docker registry, making them available on your local machine for use in creating and running containers.
-
-## 2. What is the `docker pull` Command?
-
-The `docker pull` command is used to download Docker images from a registry. This command fetches the specified image and its associated layers, storing them locally on your machine. This is a crucial step in preparing to run containers based on the downloaded image.
-
-## 3. Syntax and Usage
-
-The basic syntax for the `docker pull` command is:
-
-```bash
+## Basic Pull Commands
+# Pull an image from Docker Hub
 docker pull <image_name>:<tag>
-```
 
-## 4. Pulling Images from Docker Hub
+# Pull latest tag
+docker pull <image_name>
 
-Docker Hub is the default public registry for Docker images. It hosts a vast collection of official and community-contributed images. Pulling images from Docker Hub is straightforward and typically does not require any additional configuration
+# Pull specific version
+docker pull <image_name>:1.0
 
-## Example
+## Pull from Private Registry
+# Login to private registry
+docker login <registry_url>
 
-```bash
+# Pull from private registry
+docker pull <registry_url>/<image_name>:<tag>
+
+## Examples
+# Pull Ubuntu 20.04
 docker pull ubuntu:20.04
-```
-This command pulls the ubuntu image with the 20.04 tag from Docker Hub
 
-## 5. . Pulling Images from Private Registries
+# Pull latest nginx
+docker pull nginx
 
-In addition to Docker Hub, you can pull images from private Docker registries. Private registries are often used in enterprise environments to host proprietary or sensitive images. To pull images from a private registry, you may need to authenticate using the docker login command
+# Pull from private registry example
+docker pull myregistry.azurecr.io/myapp:1.0
 
-## Example
+## Managing Pulled Images
+# List downloaded images
+docker images
 
-```bash
-docker login myregistry.com
-docker pull myregistry.com/myapp:1.0
-```
+# Remove pulled image
+docker rmi <image_name>:<tag>
 
-This command logs you into the private registry myregistry.com and then pulls the myapp image with the 1.0 tag from the private registry
+# Remove all unused images
+docker image prune
 
-
+## Best Practices
+# Always specify image tags for version control
+# Clean up unused images regularly
+# Use private registries for sensitive images
+# Verify image checksums for security
+# Cache commonly used images locally
