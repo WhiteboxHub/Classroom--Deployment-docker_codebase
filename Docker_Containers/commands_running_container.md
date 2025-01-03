@@ -1,19 +1,5 @@
 # Executing Commands in Running Containers
 
-This document provides a comprehensive guide to executing commands within running Docker containers. This is essential for debugging, managing, and interacting with your containerized applications.
-
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Executing Commands in a Running Container](#executing-commands-in-a-running-container)
-   - [Using `docker exec`](#using-docker-exec)
-   - [Interactive Mode](#interactive-mode)
-   - [Detached Mode](#detached-mode)
-3. [Copying Files to and from a Container](#copying-files-to-and-from-a-container)
-   - [Copying Files to a Container](#copying-files-to-a-container)
-   - [Copying Files from a Container](#copying-files-from-a-container)
-4. [Best Practices](#best-practices)
-5. [Conclusion](#conclusion)
-
 ## 1. Introduction
 
 Executing commands within running Docker containers allows you to interact with the container's environment, run diagnostic tools, and manage the application running inside the container. This is crucial for troubleshooting and maintaining your containerized applications.

@@ -1,17 +1,5 @@
 # Docker Cleanup: Removing Stopped Containers and Unused Resources
 
-This document provides a comprehensive guide to cleaning up Docker environments by removing stopped containers and unused resources such as networks and images. Regular cleanup is essential for maintaining system performance and freeing up disk space.
-
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Removing All Stopped Containers](#removing-all-stopped-containers)
-3. [Removing All Unused Resources](#removing-all-unused-resources)
-   - [Removing Unused Containers](#removing-unused-containers)
-   - [Removing Unused Networks](#removing-unused-networks)
-   - [Removing Unused Images](#removing-unused-images)
-   - [Removing Unused Volumes](#removing-unused-volumes)
-4. [Best Practices](#best-practices)
-5. [Conclusion](#conclusion)
 
 ## 1. Introduction
 

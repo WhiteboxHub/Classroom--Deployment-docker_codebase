@@ -1,16 +1,5 @@
 # Docker Container Port Mapping
 
-This document provides a comprehensive guide to understanding and managing port mapping in Docker containers. Port mapping is essential for exposing container services to the host machine or other containers, enabling network communication.
-
-## Table of Contents
-1. [Introduction to Port Mapping](#introduction-to-port-mapping)
-2. [Basic Port Mapping](#basic-port-mapping)
-3. [Mapping Specific Ports](#mapping-specific-ports)
-4. [Mapping All Ports](#mapping-all-ports)
-5. [Port Mapping with Docker Compose](#port-mapping-with-docker-compose)
-6. [Best Practices](#best-practices)
-7. [Conclusion](#conclusion)
-
 ## 1. Introduction to Port Mapping
 
 Port mapping in Docker allows you to expose container ports to the host machine, making the container's services accessible from outside the container. This is crucial for running web servers, databases, and other networked applications within Docker containers.

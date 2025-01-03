@@ -1,16 +1,5 @@
 # Docker Network Management
 
-This document provides a comprehensive guide to managing Docker networks, including listing existing networks, creating new networks, and connecting containers to networks. Effective network management is crucial for ensuring secure and efficient communication between containers.
-
-## Table of Contents
-1. [Introduction to Docker Networks](#introduction-to-docker-networks)
-2. [Listing Networks](#listing-networks)
-3. [Creating a Network](#creating-a-network)
-4. [Connecting a Container to a Network](#connecting-a-container-to-a-network)
-5. [Disconnecting a Container from a Network](#disconnecting-a-container-from-a-network)
-6. [Best Practices](#best-practices)
-7. [Conclusion](#conclusion)
-
 ## 1. Introduction to Docker Networks
 
 Docker networks enable containers to communicate with each other and with external networks. Docker provides several types of networks, including bridge, host, overlay, and macvlan networks. Understanding and managing these networks is essential for building robust and secure containerized applications.

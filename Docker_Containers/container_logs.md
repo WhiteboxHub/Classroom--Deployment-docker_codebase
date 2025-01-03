@@ -1,21 +1,5 @@
 # Docker Container Logs
 
-This document provides a comprehensive guide to managing and viewing logs in Docker containers. Effective log management is crucial for debugging, monitoring, and maintaining the health of your containerized applications.
-
-## Table of Contents
-1. [Introduction to Container Logs](#introduction-to-container-logs)
-2. [Viewing Logs](#viewing-logs)
-   - [Viewing Logs of a Running Container](#viewing-logs-of-a-running-container)
-   - [Viewing Logs of a Stopped Container](#viewing-logs-of-a-stopped-container)
-3. [Following Logs in Real-Time](#following-logs-in-real-time)
-4. [Viewing Logs with Timestamps](#viewing-logs-with-timestamps)
-5. [Limiting the Number of Log Lines](#limiting-the-number-of-log-lines)
-6. [Logging Drivers](#logging-drivers)
-   - [JSON File Logging Driver](#json-file-logging-driver)
-   - [Syslog Logging Driver](#syslog-logging-driver)
-   - [Journald Logging Driver](#journald-logging-driver)
-7. [Best Practices](#best-practices)
-8. [Conclusion](#conclusion)
 
 ## 1. Introduction to Container Logs
 

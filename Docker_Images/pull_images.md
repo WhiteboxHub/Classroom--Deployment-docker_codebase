@@ -1,16 +1,5 @@
 # Docker Pull Command: Downloading Docker Images
 
-This document provides a comprehensive guide to using the `docker pull` command to download Docker images from a registry. Understanding how to pull Docker images is essential for managing and deploying containerized applications efficiently.
-
-## Table of Contents
-1. [Introduction](#introduction)
-2. [What is the `docker pull` Command?](#what-is-the-docker-pull-command)
-3. [Syntax and Usage](#syntax-and-usage)
-4. [Pulling Images from Docker Hub](#pulling-images-from-docker-hub)
-5. [Pulling Images from Private Registries](#pulling-images-from-private-registries)
-6. [Best Practices](#best-practices)
-7. [Conclusion](#conclusion)
-
 ## 1. Introduction
 
 Docker images are the foundation of containerized applications. They contain all the necessary components to run an application, including the code, runtime, libraries, and configuration files. The `docker pull` command allows you to download these images from a Docker registry, making them available on your local machine for use in creating and running containers.

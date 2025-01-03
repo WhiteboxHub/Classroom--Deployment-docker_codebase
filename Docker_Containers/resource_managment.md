@@ -1,22 +1,5 @@
 # Docker Container Resource Management
 
-This document provides a comprehensive guide to managing resources for Docker containers. Effective resource management is crucial for ensuring the performance, stability, and efficiency of your containerized applications.
-
-## Table of Contents
-1. [Introduction](#introduction)
-2. [CPU Resource Management](#cpu-resource-management)
-   - [Setting CPU Shares](#setting-cpu-shares)
-   - [Limiting CPU Usage](#limiting-cpu-usage)
-3. [Memory Resource Management](#memory-resource-management)
-   - [Setting Memory Limits](#setting-memory-limits)
-   - [Setting Memory Reservations](#setting-memory-reservations)
-4. [Disk I/O Resource Management](#disk-io-resource-management)
-   - [Setting Disk I/O Limits](#setting-disk-io-limits)
-5. [Network Resource Management](#network-resource-management)
-   - [Setting Network Bandwidth Limits](#setting-network-bandwidth-limits)
-6. [Best Practices](#best-practices)
-7. [Conclusion](#conclusion)
-
 ## 1. Introduction
 
 Resource management in Docker containers involves allocating and limiting the CPU, memory, disk I/O, and network resources available to each container. Proper resource management ensures that containers do not consume more resources than necessary, preventing resource contention and ensuring optimal performance.

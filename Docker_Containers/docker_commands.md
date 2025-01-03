@@ -1,16 +1,5 @@
 # Docker Commands: Managing Containers
 
-This document provides a step-by-step guide to running and managing Docker containers. You'll learn how to run a simple container, list containers, start and stop containers, remove containers, and understand different modes of operation.
-
-## Table of Contents
-1. [Running a Simple Container](#running-a-simple-container)
-2. [Listing Containers](#listing-containers)
-3. [Starting and Stopping Containers](#starting-and-stopping-containers)
-4. [Removing Containers](#removing-containers)
-5. [Running Containers in Different Modes](#running-containers-in-different-modes)
-   - [Detached Mode](#detached-mode)
-   - [Interactive Mode](#interactive-mode)
-
 ## 1. Running a Simple Container
 To get started with Docker, we can run a simple container using the `hello-world` image.
 

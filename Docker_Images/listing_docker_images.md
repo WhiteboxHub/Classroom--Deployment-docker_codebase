@@ -1,14 +1,5 @@
 # Listing Docker Images
 
-This document provides a comprehensive guide to listing Docker images on your local machine. Understanding how to view and manage your Docker images is essential for maintaining an organized and efficient Docker environment.
-
-## Table of Contents
-1. [Introduction](#introduction)
-2. [Listing All Docker Images](#listing-all-docker-images)
-3. [Understanding the Output](#understanding-the-output)
-4. [Filtering Images](#filtering-images)
-5. [Best Practices](#best-practices)
-6. [Conclusion](#conclusion)
 
 ## 1. Introduction
 
