@@ -1,28 +1,23 @@
 # UI Dockerfile
 
-# Use the official Node.js 18 Alpine image as the base image
+
 FROM node:18-alpine
-
-# Set the working directory inside the container
 WORKDIR /app
-
-# Copy package.json and package-lock.json to the working directory
 COPY package.json package-lock.json ./
-
-# Install dependencies
 RUN npm install
-
-# Copy the rest of the application code to the working directory
 COPY . .
-
-# Build the Next.js app
 RUN npm run build || { echo 'Build failed'; exit 1; }
-
-# Copy the .env file into the container
 COPY .env .env
-
-# Expose port 3000
 EXPOSE 3000
-
-# Start the Next.js application
 CMD ["npm", "run", "start"]
+
+
+# Use the official Node.js 18 Alpine image as the base image
+# Set the working directory inside the container
+# Copy package.json and package-lock.json to the working directory
+# Install dependencies
+# Copy the rest of the application code to the working directory
+# Build the Next.js app
+# Copy the .env file into the container
+# Expose port 3000
+# Start the Next.js application
