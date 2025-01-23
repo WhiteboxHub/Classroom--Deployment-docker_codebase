@@ -1,0 +1,21 @@
+services:
+  frontend:
+    image: remote123/whiteboxlearning:git-cicd
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    container_name: git-cicd-frontend
+    depends_on:
+      - backend
+    command: bash -c "echo 'Starting frontend...' && node server.js"
+
+  backend:
+    image: remote123/whiteboxlearning:git-cicd-backend2
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./server/git-cicd-api/.env
+    container_name: git-cicd-backend2
+
+    

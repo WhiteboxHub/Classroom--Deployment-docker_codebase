@@ -1,3 +1,5 @@
+# UI Dockerfile
+
 # Use the official Node.js 18 Alpine image as the base image
 FROM node:18-alpine
 
@@ -13,13 +15,13 @@ RUN npm install
 # Copy the rest of the application code to the working directory
 COPY . .
 
-# Always build the Next.js app to ensure the .next directory exists
+# Build the Next.js app
 RUN npm run build || { echo 'Build failed'; exit 1; }
 
-# Set environment variable to control which .env file to use
+# Copy the .env file into the container
 COPY .env .env
 
-# Expose port 3000 to the outside world
+# Expose port 3000
 EXPOSE 3000
 
 # Start the Next.js application
