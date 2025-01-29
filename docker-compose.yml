@@ -1,21 +1,36 @@
+version: "3.9"  # Use the latest version
+
 services:
-  frontend:
-    image: remote123/whiteboxlearning:git-cicd
-    ports:
-      - "3000:3000"
+  mysql:
+    image: mysql:latest  # Use the official MySQL image for amd64
+    platform: linux/amd64
+    container_name: mysql-container
     environment:
-      - NODE_ENV=production
-    container_name: git-cicd-frontend
-    depends_on:
-      - backend
-    command: bash -c "echo 'Starting frontend...' && node server.js"
-
-  backend:
-    image: remote123/whiteboxlearning:git-cicd-backend2
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: training_management
     ports:
-      - "8000:8000"
-    env_file:
-      - ./server/git-cicd-api/.env
-    container_name: git-cicd-backend2
+      - "3307:3306"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
-    
+  mongodb:
+    image: mongo:latest  # Use the official MongoDB image for amd64
+    platform: linux/amd64
+    container_name: mongodb-container
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js
+
+  neo4j:
+    image: neo4j:latest # Use the official Neo4j image for amd64
+    platform: linux/amd64
+    container_name: neo4j-container
+    environment:
+      NEO4J_AUTH: neo4j/Innovapath1
+      NEO4J_ACCEPT_LICENSE_AGREEMENT: "yes"
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - ./import.cypher:/var/lib/neo4j/import/import.cypher
